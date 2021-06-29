@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>groupCells</title>
+
+  <link rel="stylesheet" href="../bower_components/flickity/css/flickity.css" />
+  <style>
+  .carousel {
+    border: 1px solid;
+    margin-bottom: 40px;
+  }
+
+  .cell {
+    height: 200px;
+    width: 40%;
+    margin: 0 5px;
+    background: #8C8;
+    font-size: 40px;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .cell.is-selected {
+    background: #ED2;
+  }
+
+  .cell.is-nav-selected {
+    background: #19F;
+  }
+
+  .carousel--nav .cell {
+    width: 240px;
+    height: 180px;
+  }
+
+  #carousel-c .cell { width: 28%; }
+  #carousel-c .cell--width2 { width: 45%; }
+  </style>
+
+</head>
+<body>
+
+  <h1>groupCells</h1>
+
+  <h2>Nav grouped</h2>
+
+  <div id="carousel-a" class="carousel"
+    data-flickity='{ "groupCells": false }'>
+    <div class="cell">1</div>
+    <div class="cell">2</div>
+    <div class="cell">3</div>
+    <div class="cell">4</div>
+    <div class="cell">5</div>
+    <div class="cell">6</div>
+    <div class="cell">7</div>
+    <div class="cell">8</div>
+    <div class="cell">9</div>
+  </div>
+
+  <div id="carousel-b" class="carousel carousel--nav"
+    data-flickity='{ "asNavFor": "#carousel-a", "groupCells": 3 }'>
+    <div class="cell">1</div>
+    <div class="cell">2</div>
+    <div class="cell">3</div>
+    <div class="cell">4</div>
+    <div class="cell">5</div>
+    <div class="cell">6</div>
+    <div class="cell">7</div>
+    <div class="cell">8</div>
+    <div class="cell">9</div>
+  </div>
+
+
+  <h2>main grouped</h2>
+
+  <div id="carousel-c" class="carousel"
+    data-flickity='{ "groupCells": true }'>
+    <div class="cell">1</div>
+    <div class="cell">2</div>
+    <div class="cell">3</div>
+    <div class="cell cell--width2">4</div>
+    <div class="cell  cell--width2">5</div>
+    <div class="cell">6</div>
+    <div class="cell">7</div>
+    <div class="cell">8</div>
+    <div class="cell">9</div>
+    <div class="cell">10</div>
+    <div class="cell">11</div>
+  </div>
+
+  <div id="carousel-d" class="carousel carousel--nav"
+    data-flickity='{ "asNavFor": "#carousel-c" }'>
+    <div class="cell">1</div>
+    <div class="cell">2</div>
+    <div class="cell">3</div>
+    <div class="cell">4</div>
+    <div class="cell">5</div>
+    <div class="cell">6</div>
+    <div class="cell">7</div>
+    <div class="cell">8</div>
+    <div class="cell">9</div>
+    <div class="cell">10</div>
+    <div class="cell">11</div>
+  </div>
+
+<script src="../bower_components/get-size/get-size.js"></script>
+<script src="../bower_components/desandro-matches-selector/matches-selector.js"></script>
+<script src="../bower_components/ev-emitter/ev-emitter.js"></script>
+<script src="../bower_components/unipointer/unipointer.js"></script>
+<script src="../bower_components/unidragger/unidragger.js"></script>
+<script src="../bower_components/tap-listener/tap-listener.js"></script>
+<script src="../bower_components/fizzy-ui-utils/utils.js"></script>
+
+<script src="../bower_components/flickity/js/cell.js"></script>
+<script src="../bower_components/flickity/js/slide.js"></script>
+<script src="../bower_components/flickity/js/animate.js"></script>
+<script src="../bower_components/flickity/js/flickity.js"></script>
+<script src="../bower_components/flickity/js/drag.js"></script>
+<script src="../bower_components/flickity/js/prev-next-button.js"></script>
+<script src="../bower_components/flickity/js/page-dots.js"></script>
+<script src="../bower_components/flickity/js/player.js"></script>
+<script src="../bower_components/flickity/js/add-remove-cell.js"></script>
+
+<script src="../as-nav-for.js"></script>
+
+</body>
+</html>
